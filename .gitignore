@@ -1,0 +1,26 @@
+META-INF/
+
+# IntelliJ specific
+
+!intellijProject/*.iml
+.idea/
+!intellijProject/*.idea
+.idea_modules/
+
+# generic
+*.class
+*.log
+*.swp
+*~
+\#*#
+.DS_Store
+
+
+# jrebel
+rebel.xml
+*.swp
+'
+
+atlassian-ide-plugin.xml
+
+target
