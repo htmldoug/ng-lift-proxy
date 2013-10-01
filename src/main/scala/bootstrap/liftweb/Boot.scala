@@ -10,6 +10,7 @@ import sitemap._
 import Loc._
 import net.liftmodules.JQueryModule
 import net.liftweb.http.js.jquery._
+import code.rest.PonyRest
 
 
 /**
@@ -24,10 +25,12 @@ class Boot {
     // Build SiteMap
     val entries = List(
       Menu.i("Home") / "index", // the simple way to declare a menu
+      Menu.i("angular") / "angular", // the simple way to declare a menu
+      Menu.i("lift") / "lift", // the simple way to declare a menu
 
       // more complex because this menu allows anything in the
       // /static path to be visible
-      Menu(Loc("Static", Link(List("static"), true, "/static/index"), 
+      Menu(Loc("Static", Link(List("static"), true, "/static/index"),
 	       "Static Content")))
 
     // set the sitemap.  Note if you don't want access control for
@@ -54,5 +57,6 @@ class Boot {
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
     JQueryModule.init()
 
+    LiftRules.dispatch.append(new PonyRest)
   }
 }
