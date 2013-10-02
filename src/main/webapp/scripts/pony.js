@@ -1,11 +1,9 @@
-angular.module('pony', ['ngResource'])
-    .controller('PonyCtrl', function ($scope, $resource) {
+angular.module('pony', ['lift.pony'])
+    .controller('PonyCtrl', function ($scope, ponyService) {
         $scope.isRevealed = false;
 
-        var PonyResource = $resource('/rest/pony/best');
-
         $scope.onClick = function () {
-            var pony = PonyResource.get(function () {
+            ponyService.getBestPony().then(function(pony) {
                 $scope.isRevealed = true;
                 $scope.pony = pony;
             });
