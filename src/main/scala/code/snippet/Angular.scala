@@ -1,4 +1,4 @@
-package code.lib
+package code.snippet
 
 import scala.collection.mutable
 import scala.xml.NodeSeq
@@ -9,6 +9,7 @@ import net.liftweb.http.js.JsCmds._
 import net.liftweb.http.js.{JsExp, JsCmd, JsObj}
 import net.liftweb.json.Serialization.write
 import net.liftweb.json.{DefaultFormats, JsonParser}
+import code.lib.SHtmlExtensions
 
 /**
  * Dynamically generates angular modules at page render time.

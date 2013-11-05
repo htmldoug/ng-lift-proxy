@@ -4,23 +4,28 @@
     <title>Which pony is best pony?</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
     <script type="text/javascript" src="/scripts/angular.js"></script>
+    <script type="text/javascript" src="/scripts/liftproxy.js"></script>
     <script type="text/javascript" src="/scripts/jquery-2.0.3.js"></script>
 
     <script type="text/javascript" src="/scripts/pony.js"></script>
+    <script data-lift="NgPonyService"></script>
+    <script data-lift="Angular"></script>
 </head>
 
 <body>
-<div class="container">
+<div class="container" ng-app="pony" ng-controller="PonyCtrl">
 
     <h1>Which Pony is Best Pony?</h1>
 
-    <!--<button>Ask the server!</button>-->
+    <button ng-click="onClick()">Ask the Server!</button>
 
-    <div>
-        <p class="lead">If only the server could tell us...</p>
+    <div ng-show="isRevealed">
+        <p class="lead">{{pony.name}} is best pony!</p>
 
-        <img/>
+        <img ng-src="{{pony.imageUrl}}" title="{{pony.name}}"/>
+
     </div>
+
 </div>
 </body>
 </html>
