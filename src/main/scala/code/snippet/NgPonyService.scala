@@ -1,6 +1,6 @@
 package code.snippet
 
-import Angular._
+import net.liftmodules.ng.Angular._
 import code.model.PonyService
 
 class NgPonyService {
