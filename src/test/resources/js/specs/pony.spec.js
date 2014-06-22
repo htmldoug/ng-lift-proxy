@@ -32,7 +32,7 @@ describe("pony", function(){
     scope = $rootScope.$new();
     $controller('PonyCtrl', {
       $scope: scope,
-      ponyService: ponyService   // Specifying our service explicitly is optional
+      ponyService: ponyService
     });
   }));
 
