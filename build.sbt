@@ -30,3 +30,19 @@ libraryDependencies ++= {
   )
 }
 
+seq(jasmineSettings : _*)
+
+appJsDir <+= (sourceDirectory in Compile) { _ / "webapp" / "scripts" }
+
+appJsLibDir <+= (sourceDirectory in Compile) { _ / "webapp" / "scripts" }
+
+jasmineTestDir <+= (sourceDirectory in Test) { _ / "resources" / "js" }
+
+jasmineConfFile <+= (sourceDirectory in Test) { _ / "resources" / "js" / "test.dependencies.js" }
+
+jasmineRequireJsFile <+= (sourceDirectory in Test) { _ / "resources" / "js" / "require-2.0.6.js" }
+
+jasmineRequireConfFile <+= (sourceDirectory in Test) { _ / "resources" / "js" / "require.conf.js" }
+
+(Keys.test in Test) <<= (Keys.test in Test) dependsOn (jasmine)
+

@@ -5,3 +5,5 @@ addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.5.1")
 
 //Enable the sbt eclipse plugin
 addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.2.0")
+
+addSbtPlugin("com.joescii" % "sbt-jasmine-plugin" % "1.2.0")
