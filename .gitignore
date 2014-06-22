@@ -6,6 +6,11 @@ META-INF/
 !intellijProject/*.idea
 .idea_modules/
 
+# eclipse stuff
+.classpath
+.project
+.settings/
+
 # generic
 *.class
 *.log

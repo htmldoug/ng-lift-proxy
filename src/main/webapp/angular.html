@@ -3,13 +3,20 @@
 <head>
     <title>Which pony is best pony?</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
-    <script type="text/javascript" src="/scripts/angular.js"></script>
-    <script type="text/javascript" src="/scripts/liftproxy.js"></script>
     <script type="text/javascript" src="/scripts/jquery-2.0.3.js"></script>
 
-    <script type="text/javascript" src="/scripts/pony.js"></script>
-    <script data-lift="NgPonyService"></script>
+    <!-- The angular library -->
+    <script type="text/javascript" src="/scripts/angular.js"></script>
+
+    <!-- Prerequisite stuff the plugin needs -->
     <script data-lift="Angular"></script>
+    <script src="/classpath/net/liftmodules/ng/js/liftproxy.js"></script>
+
+    <!-- The NgPonyService snippet defined above -->
+    <script data-lift="NgPonyService"></script>
+
+    <!-- Your angular controllers, etc -->
+    <script type="text/javascript" src="/scripts/pony.js"></script>
 </head>
 
 <body>
